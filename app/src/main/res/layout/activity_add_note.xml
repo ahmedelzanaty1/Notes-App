@@ -28,6 +28,7 @@
         android:id="@+id/title_et"
         android:textColorHint="#9A9A9A"
         android:layout_margin="3dp"
+        android:textColor="@color/white"
         android:padding="10dp"
         android:textSize="35sp"
         />
@@ -40,9 +41,10 @@
         android:hint="Type something..."
         android:id="@+id/description_et"
         android:textColorHint="#9A9A9A"
+        android:textColor="@color/white"
         android:layout_margin="3dp"
         android:padding="10dp"
-        android:textSize="30sp"
+        android:textSize="28sp"
         />
     <ImageView
         android:layout_width="0dp"

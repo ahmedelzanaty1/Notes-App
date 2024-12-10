@@ -21,7 +21,7 @@ lateinit var adapter: NotesAdapter
         binding.extendedFab.setOnClickListener {
             val intent = Intent(this, AddNoteActivity::class.java)
             startActivity(intent)
-            binding.imagePic.visibility = View.GONE
+            binding.img.visibility = View.GONE
         }
 
     }
