@@ -10,6 +10,7 @@ import com.example.notesapplication.R
 import com.example.notesapplication.databinding.ItemNoteBinding
 
 class NotesAdapter(val notes: List<Note>) : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
+    var Onnoteclick : OnNoteClick? = null
     class NotesViewHolder(val binding: ItemNoteBinding) : RecyclerView.ViewHolder(binding.root) {
         val text = binding.noteTextview
     }
@@ -27,8 +28,8 @@ class NotesAdapter(val notes: List<Note>) : RecyclerView.Adapter<NotesAdapter.No
         val note = notes[position]
         holder.text.text = note.title
         holder.binding.cardview.setBackgroundColor(note.color)
-
-
-
+        holder.itemView.setOnClickListener {
+            Onnoteclick?.onnoteclick(note , position)
+        }
     }
 }
